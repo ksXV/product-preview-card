@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap");
+
+:root {
+  --main-color: #ffffff;
+  --secondary-color: #3d8168;
+  --hover-color: #1a4031;
+  --text-primary-color: #96979b;
+  --text-secondary-color: #1c222a;
+  --monserrat: "Montserrat", sans-serif;
+  --fraunces: "Fraunces", serif;
+}
+body {
+  background-color: #f2e9e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.article {
+  background-color: var(--main-color);
+  overflow: hidden;
+  margin: 5rem auto;
+  width: 35rem;
+  height: 26rem;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: row;
+}
+.article__image {
+  height: 26rem;
+}
+.article__div--text {
+  padding: 1.5rem 1.8rem;
+}
+.article__div--text__p {
+  font-size: 0.75rem;
+  color: var(--text-primary-color);
+  font-family: var(--monserrat);
+  letter-spacing: 3px;
+  padding-bottom: 1rem;
+}
+.article__div--text__h1 {
+  font-family: var(--fraunces);
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding-bottom: 1.25rem;
+  color: var(--text-secondary-color);
+}
+.article__div--text__h2 {
+  font-family: var(--monserrat);
+  font-size: 0.85rem;
+  color: var(--text-primary-color);
+  line-height: 1.6;
+  padding-bottom: 1.25rem;
+}
+.article__section--price {
+  display: flex;
+  flex-direction: row;
+  padding: 1.25rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.article__section--price__h1 {
+  font-family: var(--fraunces);
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+.article__section--price__h2 {
+  font-family: var(--fraunces);
+  font-size: 0.8rem;
+  color: var(--text-primary-color);
+  padding-right: 2.25rem;
+  text-decoration: line-through;
+}
+.article__button {
+  margin-top: 0.3rem;
+  width: 14rem;
+  height: 2.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.article__button:hover {
+  background-color: var(--hover-color);
+}
+.article__button__img {
+  padding: 0 0.6rem;
+}
+.article__button__p {
+  font-family: var(--monserrat);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 600px) {
+  .article {
+    margin: 1rem;
+    flex-direction: column;
+    width: 90vw;
+    height: 105vh;
+  }
+  .article__image {
+    height: 40vh;
+    width: 100%;
+  }
+  .article__button {
+    width: 100%;
+  }
+  .article__section--price__h2 {
+    padding-right: 20vw;
+  }
+}
